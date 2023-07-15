@@ -1,0 +1,336 @@
+$currentColor: #0a66c2;
+
+.connection-layout {
+  padding: 52px;
+  background-color: #f3f2ef;
+  min-height: 100vh;
+
+  .connection-layout-container {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .connection-layout-content {
+      display: grid;
+      column-gap: 1.8rem;
+      grid-template-columns: auto;
+      row-gap: 1rem;
+      margin: 0.6rem;
+      grid-template-areas: "sidebar main";
+      grid-template-columns: minmax(0, 280px) minmax(0, auto);
+    }
+  }
+}
+
+.connection-sidebar-layout {
+  grid-area: sidebar;
+  border-radius: 15px;
+  background-color: #fff;
+  height: 110px;
+
+  .connection-sidebar-content {
+    padding: 5px 0;
+
+    .connection-sidebar-header {
+      margin: 0.8rem 0.8rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    .sidebar-connection {
+      margin: 0.8rem 0.4rem;
+      position: relative;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding: 5px;
+
+      .sidebar-connection-name {
+        display: inline;
+        margin-left: 5px;
+      }
+      .sidebar-connection-count {
+        margin-left: 100px;
+      }
+    }
+  }
+}
+
+.connection-main-layout {
+  grid-area: main;
+
+  .invitation-main-conent {
+    background-color: #fff;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    
+    .invitation-main-header {
+      padding: 5px 0;
+      margin-left: 0.8rem;
+      margin-right: 0.8rem;
+      margin-bottom: 0.8rem;
+      // margin-top: 10px;
+      font-size: 1rem;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    .invitation-card__horizontal-line {
+      background-color: rgba(0, 0, 0, 0.08);
+      height: 1px;
+    }
+    .invitation-main-card {
+      border-radius: 0.6rem;
+      margin: 0.8rem;
+      // display: grid;
+      // gap: 1rem;
+      list-style-type: none;
+      flex-direction: row;
+      // border: 1px solid rgba(0, 0, 0, 0.08);
+
+      .invitation-card {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        justify-content: space-between;
+        .invitation-card-content {
+          display: flex;
+          // flex-direction: column;
+
+          .invitation-card-image {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            margin: 5px 10px;
+          }
+
+          .invitation-card-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 2px;
+            padding-right: 10px;
+
+            .invitation-card-title {
+              line-height: 1.8rem;
+              max-height: 1.8rem;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              word-break: break-all;
+              color: rgba(0, 0, 0, 0.9);
+              font-size: 1rem;
+              font-weight: 600;
+            }
+
+            .invitation-card-subtitle {
+              line-height: 1.8rem;
+              max-height: 3.2rem;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              word-break: break-word;
+              color: rgba(0, 0, 0, 0.6);
+              font-size: 0.9rem;
+              font-weight: 400;
+            }
+          }
+        }
+
+        .invitation-card-buttons {
+          padding: 0 5px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 7px;
+
+          .invitation-card-ignore-btn {
+            height: 30px;
+            border-radius: 25px;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            cursor: pointer;
+            border: none;
+            background-color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.5;
+            color: rgba(0, 0, 0, 0.6);
+          }
+          .invitation-card-ignore-btn:hover {
+            background-color: #00000022;
+          }
+
+          .invitation-card-accept-btn {
+            height: 30px;
+            border-radius: 25px;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            cursor: pointer;
+            border: 1px solid #0a66c2;
+            background-color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+            line-height: 1.5;
+            color: #0a66c2;
+          }
+
+          .invitation-card-accept-btn:hover {
+            background-color: #0a66c222;
+          }
+        }
+      }
+    }
+  }
+
+  .connection-main-conent {
+    padding: 5px 0;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+    .connection-main-header {
+      margin: 0.8rem 0.8rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    .connection-main-card {
+      border-radius: 0.6rem;
+      margin: 0.8rem;
+      display: grid;
+      gap: 1rem;
+      list-style-type: none;
+
+      .connection-main-card-li {
+        position: relative;
+        .connection-card {
+          // background-color: red;
+          border-radius: 0.6rem;
+          padding: 8px 2px;
+          flex: 1;
+          text-align: center;
+          // margin: 0.8rem 0.8rem;
+          border: 1px solid rgba(0, 0, 0, 0.3);
+
+          .connection-card-header {
+            margin-bottom: 50px;
+            position: relative;
+            .connection-card-header--container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              .connection-card-header--img {
+                width: 104px;
+                height: 104px;
+                border-radius: 50%;
+                object-fit: cover;
+                object-position: center;
+                margin-bottom: 10px;
+                background-color: #fff;
+              }
+
+              .connection-card-header--title {
+                line-height: 1.8rem;
+                max-height: 1.8rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-break: break-all;
+                color: rgba(0, 0, 0, 0.9);
+                font-size: 1rem;
+                font-weight: 600;
+              }
+
+              .connection-card-header--subtitle {
+                line-height: 1.8rem;
+                max-height: 3.2rem;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-break: break-word;
+                color: rgba(0, 0, 0, 0.6);
+                font-size: 0.9rem;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+
+        .connection-card-buttom {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 0.8rem;
+
+          .connection-card-buttom-btn {
+            width: 100%;
+            border-radius: 1.6rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            cursor: pointer;
+            justify-content: center;
+            text-align: center;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            border: 1px solid #0a66c2;
+            background-color: #fff;
+            display: flex;
+            gap: 5px;
+
+            .connect-text {
+              color: #0a66c2;
+              font-size: 1rem;
+              font-weight: 500;
+            }
+          }
+
+          .connection-card-buttom-btn:hover {
+            background-color: #0a66c222;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 576x) {
+  .connection-layout-container {
+    overflow: unset;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .connection-layout-container {
+    width: 720px;
+  }
+  .connection-layout-content {
+    grid-template-areas: "sidebar main";
+    grid-template-columns: minmax(0, 280px) minmax(0, auto);
+  }
+  .connection-main-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .connection-layout-container {
+    width: 960px;
+  }
+  .connection-main-card {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .connection-layout-container {
+    width: 1128px;
+  }
+  .connection-main-card {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

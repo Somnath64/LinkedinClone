@@ -1,0 +1,131 @@
+.social-action-like {
+  display: inline-flex;
+
+  .social-action-like-btn {
+    padding-left: 0.8rem !important;
+    padding-right: 0.8rem !important;
+    width: 100% !important;
+    min-height: 3.2rem;
+    line-height: 2.8rem;
+    min-width: 0;
+
+    .social-like {
+      font-size: 1.4rem;
+      display: flex;
+      justify-content: center !important;
+      flex-wrap: wrap !important;
+      align-items: center !important;
+
+      .social-like-icon {
+        width: 1.6rem;
+        height: 1.6rem;
+        flex-shrink: 0;
+        margin: 0 4px 0 -2px;
+      }
+      .social-like-text {
+        font-size: 1rem;
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}
+
+.social-action-like:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.comment-avatar-img {
+  width: 40px;
+  height: 40px;
+  .comment-img {
+    object-position: center;
+    object-fit: cover;
+    height: 40px;
+    width: 40px;
+    background-position: 50%;
+    background-size: cover;
+    border-radius: 50%;
+  }
+}
+
+.comments {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  position: relative;
+  // border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+
+  .comment-post-profile {
+    display: flex;
+    .comment-post-profile-wrapper {
+      padding: 0.4rem 0 0.4rem 0.8rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      width: 90%;
+
+      .comment-post-profile-name {
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+        line-height: 1.33;
+        color: rgba(0, 0, 0, 0.9);
+        font-weight: 600;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+      }
+
+      .comment-post-profile-name:hover {
+        text-decoration: underline;
+        color: #0a66c2;
+      }
+
+      .comment-post-profile-subheading {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 0.7rem;
+        line-height: 1.3;
+        font-weight: 400;
+        cursor: pointer;
+      }
+    }
+
+    .comment-timestamp {
+      display: inline-block;
+      font-size: 0.8rem;
+    }
+  }
+
+  .comment-text {
+    padding: 0.4rem 0.8rem 1rem 0.8rem;
+    overflow: hidden;
+    font-size: 0.9rem;
+    white-space: wrap;
+  }
+
+  .comment-text-h {
+    padding: 0.4rem 0.8rem 1rem 0.8rem;
+    max-height: 200px;
+    overflow: hidden;
+    white-space: wrap;
+    font-size: 0.9rem;
+  }
+  .comment-see-more {
+    position: absolute;
+    right: 18px;
+    bottom: 1px;
+
+    .comment-see-more-btn {
+      border: none;
+      padding: 2px;
+      cursor: pointer;
+    }
+  }
+}

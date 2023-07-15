@@ -1,0 +1,14 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  gap: 10px;
+
+  p {
+    font-family: system-ui, sans-serif;
+    font-size: 600;
+    color: rgba(0, 0, 0, 0.9);
+  }
+}

@@ -1,0 +1,28 @@
+.profile-upload-image {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: end;
+  align-items: center;
+  .upload-label{
+  border: 1px solid rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    // background-color: #0a66c2;
+    color: black;
+    cursor: pointer;
+  }
+
+  .progress-bar{
+    padding: 20px;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: none;
+
+  }
+}
