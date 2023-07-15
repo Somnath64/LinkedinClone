@@ -10,7 +10,7 @@ import {
 } from "../../../api/FirestoreAPI";
 import { PostsCard } from "../PostCard";
 import { useLocation } from "react-router-dom";
-import { editIcon, cameraIcon } from "../../../assets";
+import { editIcon} from "../../../assets";
 import { useState, useMemo } from "react";
 
 export default function ProfilePage({ currentUser }) {
