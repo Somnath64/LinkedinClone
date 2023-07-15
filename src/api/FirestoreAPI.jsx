@@ -214,6 +214,17 @@ export const addConnection = (userId, targetId) => {
   }
 };
 
+export const deleteConnection = (userId, targetId) => {
+  try {
+    let TodeleteConnection = doc(connectionRef, `${userId}_${targetId}`);
+
+    deleteDoc(TodeleteConnection);
+    toast.success("Disconnected successfully");
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 export const getConnections = (userId, targetId, setIsConnected) => {
   try {
     let connectionsQuery = query(

@@ -5,7 +5,6 @@ import { router } from "./Routes";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "react-quill/dist/quill.snow.css";
-// eslint-disable-next-line no-unused-vars
 import { app } from "./firebaseConfig";
 import "./index.scss";
 

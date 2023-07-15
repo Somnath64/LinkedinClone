@@ -1,20 +1,14 @@
 /* eslint-disable react/prop-types */
 import { Modal, Button } from "antd";
 import "./index.scss";
-// import { useState } from "react";
 
 const ProfileModal = ({
   modalOpen,
   setModalOpen,
-  // sendStatus,
-  // setEditInput,
   getInput,
   updateProfileData,
   editInput,
-  // setStatus,
-  // status,
 }) => {
-  // const [input, setInput] = useState("");
   return (
     <>
       <Modal
@@ -83,7 +77,6 @@ const ProfileModal = ({
             />
           </div>
           <div className="modal-input-field">
-            {/* <p className="heading-text">Basic Info</p> */}
             <label className="modal-label">Industry *</label>
             <input
               type="text"
@@ -109,7 +102,6 @@ const ProfileModal = ({
             />
           </div>
           <div className="modal-input-field">
-            {/* <p className="heading-text">Basic Info</p> */}
             <label className="modal-label">City *</label>
             <input
               type="text"
@@ -135,19 +127,6 @@ const ProfileModal = ({
             />
           </div>
         </div>
-
-        {/* <div className="share-box">
-          <div className="share-box-top"></div>
-        </div> */}
-        {/* <label>First Name</label>
-        <input
-          type="text"
-          required
-          placeholder="What do you want to talk about?"
-          className="modal-input"
-          onChange={(e) => setStatus(e.target.value)}
-          value={status}
-        /> */}
       </Modal>
     </>
   );

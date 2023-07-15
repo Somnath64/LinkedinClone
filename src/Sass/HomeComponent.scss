@@ -1,0 +1,278 @@
+.home-wrapper {
+  background: #fff;
+  margin: 0 20px;
+  .nav {
+    max-width: 1128px;
+    margin: auto;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-wrap: nowrap;
+
+    .logo {
+      cursor: pointer;
+      .logo-img {
+        width: 140px;
+      }
+    }
+
+    .navleft {
+      display: flex;
+      .navlist {
+        display: flex;
+        text-decoration: none;
+        list-style: none;
+        align-content: center;
+
+        .nav-li {
+          display: flex;
+          flex-direction: column;
+
+          .navlink {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 52px;
+            text-decoration: none;
+            width: 64px;
+            flex-direction: column;
+            margin: 0 8px;
+            color: rgba(0, 0, 0, 0.3);
+            :hover {
+              color: rgba(0, 0, 0, 0.9);
+            }
+
+            .li-img {
+              color: rgba(0, 0, 0, 0.3);
+              width: 23px;
+            }
+          }
+        }
+
+        .hline {
+          background-color: rgba(0, 0, 0, 0.3);
+          width: 1px;
+          height: 40px;
+          margin: 5px;
+        }
+      }
+      .nav_cta {
+        display: flex;
+        justify-items: center;
+        gap: 5px;
+        align-items: center;
+        // min-width: 100px;
+        flex-wrap: nowrap;
+        flex-shrink: 0;
+
+        .sign-btn {
+          width: 100px;
+          height: 50px;
+          border-radius: 50px;
+          font-size: 1rem;
+          font-weight: 400;
+          cursor: pointer;
+          background-color: #fff;
+          border: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .btn_join:hover {
+          background-color: rgba(0, 0, 0, 0.08);
+        }
+
+        .btn_signin {
+          border: solid 1px #0a66c2;
+          color: #0a66c2;
+        }
+        :hover {
+          background-color: #0a66c222;
+        }
+      }
+    }
+  }
+
+  .main_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    min-height: calc(100vh - 76px - 50px);
+
+    .section {
+      max-width: 1128px;
+      position: relative;
+      display: flex;
+      width: 100%;
+      align-items: center;
+      flex-wrap: nowrap;
+      min-height: 560px;
+      padding-top: 40px;
+
+      .hero_content {
+        padding-right: 42px;
+        position: relative;
+        align-self: flex-start;
+        flex-shrink: 0;
+        width: 55%;
+
+        .hero_heading {
+          font-size: 56px;
+          font-weight: 200;
+          color: #8f5849;
+          line-height: 1.2;
+        }
+
+        .hero_cta-form {
+          margin-bottom: 0;
+          margin-top: 24px;
+          width: 408px;
+          display: flex;
+          flex-direction: column;
+
+          .input-wrapper {
+            position: relative;
+            display: flex;
+          }
+
+          .input-label {
+            color: black;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 8px 0;
+          }
+
+          .input-text {
+            width: 100%;
+            border-color: rgba(0, 0, 0, 0.75);
+            color: rgba(0, 0, 0, 0.9);
+            font-size: 16px;
+            border: 1px solid;
+            border-radius: 4px;
+            padding: 14px 16px;
+            flex-grow: 1;
+            outline-width: 0px;
+          }
+          .input-text:hover {
+            background-color: rgba(0, 0, 0, 0.08);
+            outline: auto;
+          }
+
+          .input-show-btn {
+            position: absolute;
+            right: 10px;
+            top: 14px;
+            color: #0a66c2;
+            font-weight: 600;
+            font-size: 16px;
+            margin-left: 12px;
+            z-index: 1000;
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            cursor: pointer;
+          }
+
+          .btn-md {
+            height: min-content;
+            min-height: 48px;
+            border-radius: 24px;
+            padding: 12px 24px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            border: 1px solid transparent;
+          }
+
+          .signin-form_btn {
+            cursor: pointer;
+            flex-shrink: 0;
+            max-width: 100%;
+            width: 100%;
+            margin: 15px 0;
+            box-shadow: 0 0 0 1px;
+            background-color: #0a66c2;
+            color: #fff;
+            text-decoration-line: none;
+          }
+
+          .google-auth-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            background-color: #4285f4;
+            border-radius: 25px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+          }
+
+          .signin-join-cta {
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.75);
+            background-color: transparent;
+            color: rgba(0, 0, 0, 0.75);
+            cursor: pointer;
+            text-decoration-line: none;
+            margin-bottom: 24px;
+          }
+
+          .signin-join-cta:hover {
+            background-color: #f3f0f0;
+          }
+        }
+      }
+
+      .welcome-img {
+        flex-shrink: 1;
+        width: 680px;
+        height: 560px;
+        display: block;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .nav {
+    .logo-img {
+      width: 90px !important;
+    }
+
+    .navlist {
+      display: none !important;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main_container {
+    .section {
+      flex-direction: column;
+
+      .hero_content {
+        width: 100% !important;
+        padding-right: 0 !important;
+
+        .hero_heading {
+          font-size: 30px !important;
+        }
+        .hero_cta-form {
+          width: 100% !important;
+        }
+      }
+
+      .welcome-img {
+        width: 300px !important;
+        height: 250px !important;
+      }
+    }
+  }
+}

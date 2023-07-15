@@ -1,5 +1,3 @@
-$currentColor: #0a66c2;
-
 .connection-layout {
   padding: 52px;
   background-color: #f3f2ef;
@@ -9,15 +7,13 @@ $currentColor: #0a66c2;
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 1128px;
 
     .connection-layout-content {
       display: grid;
       column-gap: 1.8rem;
-      grid-template-columns: auto;
       row-gap: 1rem;
       margin: 0.6rem;
-      grid-template-areas: "sidebar main";
-      grid-template-columns: minmax(0, 280px) minmax(0, auto);
     }
   }
 }
@@ -42,16 +38,19 @@ $currentColor: #0a66c2;
       margin: 0.8rem 0.4rem;
       position: relative;
       display: flex;
-      justify-content: start;
+      justify-content: space-between;
       align-items: center;
       padding: 5px;
+      cursor: pointer;
+      &:hover {
+        color: #0a66c2;
+      }
 
       .sidebar-connection-name {
-        display: inline;
         margin-left: 5px;
       }
       .sidebar-connection-count {
-        margin-left: 100px;
+        margin-right: 1rem;
       }
     }
   }
@@ -65,13 +64,12 @@ $currentColor: #0a66c2;
     border-radius: 15px;
     margin-bottom: 10px;
     padding-top: 5px;
-    
+
     .invitation-main-header {
       padding: 5px 0;
       margin-left: 0.8rem;
       margin-right: 0.8rem;
       margin-bottom: 0.8rem;
-      // margin-top: 10px;
       font-size: 1rem;
       line-height: 1.5;
       font-weight: 400;
@@ -84,11 +82,8 @@ $currentColor: #0a66c2;
     .invitation-main-card {
       border-radius: 0.6rem;
       margin: 0.8rem;
-      // display: grid;
-      // gap: 1rem;
       list-style-type: none;
       flex-direction: row;
-      // border: 1px solid rgba(0, 0, 0, 0.08);
 
       .invitation-card {
         display: flex;
@@ -205,132 +200,71 @@ $currentColor: #0a66c2;
       display: grid;
       gap: 1rem;
       list-style-type: none;
-
-      .connection-main-card-li {
-        position: relative;
-        .connection-card {
-          // background-color: red;
-          border-radius: 0.6rem;
-          padding: 8px 2px;
-          flex: 1;
-          text-align: center;
-          // margin: 0.8rem 0.8rem;
-          border: 1px solid rgba(0, 0, 0, 0.3);
-
-          .connection-card-header {
-            margin-bottom: 50px;
-            position: relative;
-            .connection-card-header--container {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-
-              .connection-card-header--img {
-                width: 104px;
-                height: 104px;
-                border-radius: 50%;
-                object-fit: cover;
-                object-position: center;
-                margin-bottom: 10px;
-                background-color: #fff;
-              }
-
-              .connection-card-header--title {
-                line-height: 1.8rem;
-                max-height: 1.8rem;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                word-break: break-all;
-                color: rgba(0, 0, 0, 0.9);
-                font-size: 1rem;
-                font-weight: 600;
-              }
-
-              .connection-card-header--subtitle {
-                line-height: 1.8rem;
-                max-height: 3.2rem;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                word-break: break-word;
-                color: rgba(0, 0, 0, 0.6);
-                font-size: 0.9rem;
-                font-weight: 400;
-              }
-            }
-          }
-        }
-
-        .connection-card-buttom {
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          padding: 0.8rem;
-
-          .connection-card-buttom-btn {
-            width: 100%;
-            border-radius: 1.6rem;
-            padding-left: 1rem;
-            padding-right: 1rem;
-            cursor: pointer;
-            justify-content: center;
-            text-align: center;
-            padding-top: 4px;
-            padding-bottom: 4px;
-            border: 1px solid #0a66c2;
-            background-color: #fff;
-            display: flex;
-            gap: 5px;
-
-            .connect-text {
-              color: #0a66c2;
-              font-size: 1rem;
-              font-weight: 500;
-            }
-          }
-
-          .connection-card-buttom-btn:hover {
-            background-color: #0a66c222;
-          }
-        }
-      }
+      // grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
 }
 
-@media screen and (min-width: 576x) {
-  .connection-layout-container {
-    overflow: unset;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .connection-layout-container {
-    width: 720px;
-  }
+@media screen and (min-width: 1200px) {
   .connection-layout-content {
     grid-template-areas: "sidebar main";
     grid-template-columns: minmax(0, 280px) minmax(0, auto);
   }
   .connection-main-card {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-@media screen and (min-width: 992px) {
-  .connection-layout-container {
-    width: 960px;
+@media screen and (min-width: 1128px) {
+  .connection-layout-content {
+    grid-template-areas: "sidebar main";
+    grid-template-columns: minmax(0, 280px) minmax(0, auto);
   }
+  .connection-main-card {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 1128px) {
+  .connection-layout-content {
+    grid-template-areas: "sidebar main";
+    grid-template-columns: minmax(0, 280px) minmax(0, auto);
+  }
+
   .connection-main-card {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .connection-layout-container {
-    width: 1128px;
+@media screen and (max-width: 992px) {
+  .connection-layout-content {
+    grid-template-areas: "sidebar main";
+    grid-template-columns: minmax(0, 280px) minmax(0, auto);
   }
+
   .connection-main-card {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .connection-layout-content {
+    grid-template-areas: "sidebar" " main";
+    grid-template-columns: minmax(0, auto);
+  }
+
+  .connection-main-card {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .connection-layout-content {
+    grid-template-areas: "sidebar" " main";
+    grid-template-columns: minmax(0, auto);
+  }
+
+  .connection-main-card {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }

@@ -10,10 +10,7 @@ import {
 } from "../../../api/FirestoreAPI";
 import { PostsCard } from "../PostCard";
 import { useLocation } from "react-router-dom";
-
-import editIcon from "../../../assets/signin/editIcon.svg";
-import cameraIcon from "../../../assets/signin/cameraIcon.svg";
-// import connectIcon from "../../../assets/signin/connectIcon.svg";
+import { editIcon, cameraIcon } from "../../../assets";
 import { useState, useMemo } from "react";
 
 export default function ProfilePage({ currentUser }) {
@@ -57,11 +54,11 @@ export default function ProfilePage({ currentUser }) {
             <main className="main__layout">
               <div className="top-card">
                 <div className="hero-image">
-                  <div className="background-image-edit">
+                  {/* <div className="background-image-edit">
                     <button className="background-image-edit-btn button">
                       <img src={cameraIcon} alt="" />
                     </button>
-                  </div>
+                  </div> */}
                 </div>
                 <div className="p5">
                   <div className="flex">
@@ -176,41 +173,6 @@ export default function ProfilePage({ currentUser }) {
                     })}
               </div>
             </main>
-            {/* <aside className="aside__layout">
-              <section className="people-card">
-                <div className="card-header-container">
-                  <span className="header-text">People you may know</span>
-                </div>
-                <div className="card-body-container">
-                  <div className="body-container-padding">
-                    <div>
-                      <div className="image-entity">
-                        <img
-                          src="https://media.licdn.com/dms/image/C4E03AQEzsEGh0fJhjA/profile-displayphoto-shrink_400_400/0/1659851960402?e=1692835200&v=beta&t=RxSRzYBt68byDACfFWrDwuXQJie_ZfO9pmXXhVCv2uA"
-                          alt=""
-                          className="card-profile-image"
-                        />
-                      </div>
-                    </div>
-                    <div className="heading-container">
-                      <div className="heading-content">
-                        <span className="heading-text">Bharat Bhosale</span>
-                        <span className="subheading-text">
-                          full stack Developer
-                        </span>
-                      </div>
-                      <div className="connect-btn-container">
-                        <button className="connect-btn button">
-                          <img src={connectIcon} alt="" />
-                          <span className="connect-text">Connect</span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="people-card-divider" />
-              </section>
-            </aside> */}
           </div>
         </div>
       </div>

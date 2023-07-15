@@ -1,27 +1,21 @@
 import { useState } from "react";
-import LinkedinLogo from "../assets/linkedinLogo.png";
-// import { getUniqueId } from "../helpers/getUniqueId";
-
-import "../Sass/SignUpComponent.scss";
-// import GoogleLogo from "../assets/googleLogo.png";
 import { toast } from "react-toastify";
-
-import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 import { SignUpAPI, GoogleSigninAPI } from "../api/AuthAPI";
 import GoogleButton from "react-google-button";
 import { postUserData } from "../api/FirestoreAPI";
+import "../Sass/SignUpComponent.scss";
+import { linkedinLogo } from "../assets";
+import Footer from "./Footer";
+import Divider from "./common/Divider/index";
 
 const SignUp = () => {
   let navigate = useNavigate();
   const [credentials, setCredentials] = useState({});
   const [showBtn, setShowBtn] = useState("password");
 
-  // console.log(credentials);
-
   const showPasswordHandler = () => {
     const text = showBtn == "text" ? "password" : "text";
-    // console.log(text);
     setShowBtn(text);
   };
 
@@ -54,7 +48,7 @@ const SignUp = () => {
   return (
     <div className="signup-wrapper">
       <div className="signup-container">
-        <header className="signup-header">
+        <header>
           <div className="signup-logo-container">
             <span
               onClick={() => {
@@ -62,7 +56,7 @@ const SignUp = () => {
               }}
             >
               <img
-                src={LinkedinLogo}
+                src={linkedinLogo}
                 alt="linkedin logo"
                 className="signup-img"
               />
@@ -73,108 +67,96 @@ const SignUp = () => {
           </h1>
         </header>
         <div className="join-form-wrapper">
-          <div action="" className="join-form">
-            <section className="join-form_body">
-              <div className="join-form_input">
-                <label className="input__label">Name</label>
+          <section className="join-form_body">
+            <div className="join-form_input">
+              <label className="input__label">Name</label>
+              <input
+                className="input__input"
+                type="text"
+                required
+                autoFocus
+                autoComplete="Name"
+                onChange={(event) =>
+                  setCredentials({
+                    ...credentials,
+                    name: event.target.value,
+                  })
+                }
+              />
+              <label className="input__label">Email Id</label>
+              <input
+                className="input__input"
+                type="email"
+                required
+                autoComplete="Email"
+                onChange={(event) =>
+                  setCredentials({
+                    ...credentials,
+                    email: event.target.value,
+                  })
+                }
+              />
+              <label className="input__label">
+                Password (6+ more characters)
+              </label>
+              <div className="join-form_show-password">
                 <input
+                  type={showBtn}
                   className="input__input"
-                  type="text"
                   required
-                  autoComplete="Name"
+                  autoComplete="password"
                   onChange={(event) =>
                     setCredentials({
                       ...credentials,
-                      name: event.target.value,
+                      password: event.target.value,
                     })
                   }
                 />
-                <label className="input__label">Email Id</label>
-                <input
-                  className="input__input"
-                  type="email"
-                  required
-                  autoComplete="Email"
-                  onChange={(event) =>
-                    setCredentials({
-                      ...credentials,
-                      email: event.target.value,
-                    })
-                  }
-                />
-                <label className="input__label">
-                  Password (6 or more characters)
-                </label>
-                <div className="join-form_show-password">
-                  <input
-                    type={showBtn}
-                    className="input__input"
-                    required
-                    autoComplete="password"
-                    onChange={(event) =>
-                      setCredentials({
-                        ...credentials,
-                        password: event.target.value,
-                      })
-                    }
-                  />
-                  <button
-                    className="join-form_show-password-btn"
-                    onClick={showPasswordHandler}
-                  >
-                    Show
-                  </button>
-                </div>
-                <span className="join-form_body-agreement">
-                  By clicking Agree & Join, you agree to the LinkedIn User
-                  Agreement, Privacy Policy, and Cookie Policy.
-                </span>
                 <button
-                  type="submit"
-                  onClick={register}
-                  className="join-form__submit-btn"
+                  className="join-form_show-btn"
+                  onClick={showPasswordHandler}
                 >
-                  Agree & Join
+                  Show
                 </button>
               </div>
-              <div className="flex form__divider signup-form_divider">
-                <span className="form-divider-line"></span>
-                <p className="form__divider-text p-20">or</p>
-                <span className="form-divider-line"></span>
-              </div>
-              <div className="google-auth-container google-auth ">
-                <GoogleButton className="google-auth" onClick={googleSignIn} />
-
-                {/* <div className="mb-16px">
-                  <div className="btn-md google-auth">
-                    <img
-                      src={GoogleLogo}
-                      alt="Google Logo"
-                      className="google-logo-img"
-                    />
-                    <span>Continue with Google</span>
-                  </div>
-                </div> */}
-              </div>
-            </section>
-          </div>
-          <p className="main-signin-container">
-            Already on LinkedIn?
-            <span
-              className="main-signin"
-              onClick={() => {
-                navigate("/login");
-              }}
-            >
-              {" "}
-              Sign in
-            </span>
+              <span className="join-form_body-agreement">
+                By clicking Agree & Join, you agree to the
+                <span className="agreement-color">
+                  {" "}
+                  LinkedIn User Agreement, Privacy Policy,
+                </span>{" "}
+                and <span className="agreement-color">Cookie Policy.</span>
+              </span>
+              <button
+                type="submit"
+                onClick={register}
+                className="join-form__submit-btn"
+              >
+                Agree & Join
+              </button>
+            </div>
+            <Divider />
+            <div className="google-auth-container">
+              <GoogleButton onClick={googleSignIn} />
+            </div>
+            <p className="main-signin-container">
+              Already on LinkedIn?
+              <span
+                className="main-signin"
+                onClick={() => {
+                  navigate("/login");
+                }}
+              >
+                {" "}
+                Sign in
+              </span>
+            </p>
+          </section>
+          <p className="page-help_link-text">
+            Looking to create a page for a business?
+            <a href=""> Get help</a>
           </p>
         </div>
-        <p className="page-help_link-text">
-          Looking to create a page for a business?
-          <a href=""> Get help</a>
-        </p>
       </div>
       <Footer />
     </div>

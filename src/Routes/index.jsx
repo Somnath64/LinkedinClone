@@ -31,8 +31,4 @@ export const router = createBrowserRouter([
     path: "/mynetwork",
     element: <ConnectionLayout />,
   },
-  // {
-  //   path: "/connection",
-  //   element: <ConnectionLayout />,
-  // },
 ]);

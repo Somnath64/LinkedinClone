@@ -1,17 +1,18 @@
 /* eslint-disable react/prop-types */
 import { useNavigate } from "react-router-dom";
 import { getAllUsers } from "../../../api/FirestoreAPI";
-import linkedlogo from "../../../assets/signin/linkedinlogo.svg";
-import searchIcon from "../../../assets/signin/search.svg";
-import homeIcon from "../../../assets/signin/homeIcon.svg";
-import peopleIcon from "../../../assets/signin/peopleIcon.svg";
-import jobsIcon from "../../../assets/signin/jobsIcon.svg";
-import messageIcon from "../../../assets/signin/messageIcon.svg";
-import notificationIcon from "../../../assets/signin/notificationIcon.svg";
-
 import "./index.scss";
 import ProfilePopup from "../ProfilePopup";
 import { useEffect, useState } from "react";
+import {
+  linkedinSmallLogo,
+  homeLogo,
+  searchIcon,
+  peopleLogo,
+  jobsIcon,
+  messageIcon,
+  notificationIcon,
+} from "../../../assets";
 
 export default function TopBar({ currentUser }) {
   const [popup, setPopup] = useState(false);
@@ -19,6 +20,7 @@ export default function TopBar({ currentUser }) {
   const [searchUsers, setSearchUsers] = useState("");
   const [users, setUsers] = useState([]);
   const [filteredUsers, setFilteredUsers] = useState([]);
+  
 
   const navigate = useNavigate();
 
@@ -73,7 +75,11 @@ export default function TopBar({ currentUser }) {
     <header className="global-topbar">
       <div className="global-topbar-content">
         <span className="global-topbar-logo-container">
-          <img src={linkedlogo} alt="linkedinlogo" className="topbar-logo" />
+          <img
+            src={linkedinSmallLogo}
+            alt="linkedinlogo"
+            className="topbar-logo"
+          />
         </span>
 
         <div className="global-search">
@@ -84,7 +90,6 @@ export default function TopBar({ currentUser }) {
               onChange={(e) => {
                 setSearchUsers(e.target.value);
               }}
-              
             />
           </div>
           <div className="global-search-icon-container">
@@ -99,7 +104,7 @@ export default function TopBar({ currentUser }) {
                 onClick={() => goto("/home")}
               >
                 <div className="global_nav-icon">
-                  <img src={homeIcon} alt="homeicon" />
+                  <img src={homeLogo} alt="homeicon" />
                 </div>
                 <div className="global_nav-primary-text ">
                   <span className="global_nav-text">Home</span>
@@ -108,11 +113,11 @@ export default function TopBar({ currentUser }) {
             </li>
             <li className="global_nav-primary-item">
               <div
-                className="global_nav-primary-link global_nav-primary-link--active"
+                className="global_nav-primary-link global_nav-primary-link--active "
                 onClick={() => goto("/mynetwork")}
               >
                 <div className="global_nav-icon">
-                  <img src={peopleIcon} alt="peoplrIcon" />
+                  <img src={peopleLogo} alt="peoplrIcon" />
                 </div>
                 <div className="global_nav-primary-text">
                   <span className="global_nav-text">My Network</span>
@@ -121,7 +126,7 @@ export default function TopBar({ currentUser }) {
             </li>
             <li className="global_nav-primary-item">
               <div
-                className="global_nav-primary-link global_nav-primary-link--active"
+                className="global_nav-primary-link global_nav-primary-link--active "
                 onClick={() => goto("")}
               >
                 <div className="global_nav-icon">
@@ -134,7 +139,7 @@ export default function TopBar({ currentUser }) {
             </li>
             <li className="global_nav-primary-item">
               <div
-                className="global_nav-primary-link global_nav-primary-link--active"
+                className="global_nav-primary-link global_nav-primary-link--active "
                 onClick={() => goto("")}
               >
                 <div className="global_nav-icon">
@@ -147,7 +152,7 @@ export default function TopBar({ currentUser }) {
             </li>
             <li className="global_nav-primary-item">
               <div
-                className="global_nav-primary-link global_nav-primary-link--active"
+                className="global_nav-primary-link global_nav-primary-link--active "
                 onClick={() => goto("")}
               >
                 <div className="global_nav-icon">
@@ -160,7 +165,7 @@ export default function TopBar({ currentUser }) {
             </li>
             {isPopupOpen && <ProfilePopup currentUser={currentUser} />}
             <li className="global_nav-primary-item" onClick={handleCardClick}>
-              <div className="global_nav-primary-link global_nav-primary-link--active">
+              <div className="global_nav-primary-link global_nav-primary-link--active ">
                 <div className="global_nav-icon">
                   <img
                     src={currentUser?.imageLink}

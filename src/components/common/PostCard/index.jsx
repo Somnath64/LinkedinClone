@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
-import "./index.scss";
-import moment from "moment";
+import { useMemo, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import moment from "moment";
+import "./index.scss";
+import LikeButton from "../LikeButton";
 import {
   getCurrentUser,
   getLikesByUser,
@@ -9,11 +11,7 @@ import {
   deletePost,
   getConnections,
 } from "../../../api/FirestoreAPI";
-import LikeButton from "../LikeButton";
-import worldIcon from "../../../assets/signin/worldIcon.svg";
-import editIcon from "../../../assets/signin/editIcon.svg";
-import deleteIcon from "../../../assets/signin/deleteIcon.svg";
-import { useMemo, useState, useEffect } from "react";
+import { worldIcon, editIcon, deleteIcon } from "../../../assets";
 
 export const PostsCard = ({ posts, getEditData }) => {
   let navigate = useNavigate();
@@ -118,9 +116,6 @@ export const PostsCard = ({ posts, getEditData }) => {
                 <div dangerouslySetInnerHTML={{ __html: posts.status }}></div>
               </span>
             </div>
-            {/* <button className="show-more-btn">
-              <span className="show-more-text">…see more</span>
-            </button> */}
           </div>
         </div>
         {posts.postImage && (
@@ -167,11 +162,6 @@ export const PostsCard = ({ posts, getEditData }) => {
                 <span>{commentCount} comments</span>
               </button>
             </li>
-            {/* <li className="social-details">
-              <button className="button social-details-btn">
-                <span>• 4 reposts</span>
-              </button>
-            </li> */}
           </ul>
 
           <LikeButton

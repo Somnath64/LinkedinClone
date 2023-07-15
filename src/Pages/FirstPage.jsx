@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebaseConfig";
+import { onAuthStateChanged } from "firebase/auth";
 import Loader from "../components/common/Loader";
-
-import FirstPageComponent from "../components/FirstPageComponent";
+import HomeComponent from "../components/HomeComponent";
 
 export default function FirstPage() {
   const [loading, setLoading] = useState(true);
@@ -21,5 +20,5 @@ export default function FirstPage() {
       }
     });
   }, []);
-  return loading ? <Loader /> : <FirstPageComponent />;
+  return loading ? <Loader /> : <HomeComponent />;
 }

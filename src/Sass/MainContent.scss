@@ -1,8 +1,10 @@
 .layout-main {
   grid-area: main;
   display: block;
-  width: 560px;
-  
+
+  @media screen and (min-width: 576px) {
+    width: 560px;
+  }
 
   .share-feed-box {
     border-radius: 0.8rem !important;
@@ -93,11 +95,13 @@
       }
     }
   }
+
+  .button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
 }
 
-.button {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
+

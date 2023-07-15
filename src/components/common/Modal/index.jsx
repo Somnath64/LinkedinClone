@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Modal, Button, Progress } from "antd";
-import imageIcon from "../../../assets/imageIcon.png";
+// import imageIcon from "../../../assets/imageIcon.png";
+import { imageIcon } from "../../../assets";
 import { useState } from "react";
 import { uploadPostImage } from "../../../api/UploadImage";
 import ReactQuill from "react-quill";
@@ -52,14 +53,13 @@ const ModalComponent = ({
         ]}
       >
         <div className="post-body">
-          {/* <textarea
-            type="text"
-            placeholder="What do you want to talk about?"
-           
-            onChange={(e) => setStatus(e.target.value)}
+          <ReactQuill
+            className="modal-input"
+            theme="snow"
             value={status}
-          /> */}
-          <ReactQuill  className="modal-input" theme="snow" value={status} onChange={setStatus} />;
+            onChange={setStatus}
+          />
+          ;
           {progress === 0 || progress === 100 ? (
             <></>
           ) : (

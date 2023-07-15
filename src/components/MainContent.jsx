@@ -3,19 +3,12 @@ import { useState, useMemo } from "react";
 import "../Sass/MainContent.scss";
 import { postStatus, getStatus, updatePost } from "../api/FirestoreAPI";
 import { getCurrentTimeStamp } from "../helpers/useMoment";
-
 import { PostsCard } from "./common/PostCard";
-
-import imageIcon from "../assets/imageIcon.png";
-import videoIcon from "../assets/videoIcon.png";
-import articleIcon from "../assets/articleIcon.png";
-import eventIcon from "../assets/eventIcon.png";
-
+import { imageIcon, videoIcon, articleIcon, eventIcon } from "../assets";
 import ModalComponent from "./common/Modal";
 import { getUniqueId } from "../helpers/getUniqueId";
 
 export default function MainContent({ currentUser }) {
-  // let userEmail = localStorage.getItem("userEmail");
   const [modalOpen, setModalOpen] = useState(false);
   const [status, setStatus] = useState("");
   const [allPosts, setAllPosts] = useState([]);
@@ -57,7 +50,6 @@ export default function MainContent({ currentUser }) {
   useMemo(() => {
     getStatus(setAllPosts);
   }, []);
-  // console.log(allPosts);
   return (
     <div className="layout-main">
       <div>
@@ -113,7 +105,6 @@ export default function MainContent({ currentUser }) {
           </div>
         </div>
       </div>
-
       <div>
         {allPosts &&
           allPosts.map((posts) => {
