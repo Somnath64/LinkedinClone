@@ -1,12 +1,10 @@
 import { useState } from "react";
 import "../Sass/SignIn.scss";
 import { toast } from "react-toastify";
-import LoginApi, { GoogleSigninAPI } from "../api/AuthAPI";
-import GoogleButton from "react-google-button";
+import LoginApi from "../api/AuthAPI";
 import { useNavigate } from "react-router-dom";
 import { linkedinLogo } from "../assets";
 import Footer from "./Footer";
-import Divider from "./common/Divider/index.jsx";
 
 const SignIn = () => {
   let navigate = useNavigate();
@@ -30,10 +28,7 @@ const SignIn = () => {
     }
   };
 
-  const googleSignIn = async () => {
-    let res = await GoogleSigninAPI();
-    console.log(res);
-  };
+ 
 
   return (
     <div className="signin-wrapper">
@@ -93,11 +88,6 @@ const SignIn = () => {
             <button onClick={login} className="signin-form_btn btn-md">
               Sign in
             </button>
-            {/* </div> */}
-            <Divider />
-            <div className="google-auth-container">
-              <GoogleButton onClick={googleSignIn} />
-            </div>
           </div>
         </div>
         <div className="join-now">

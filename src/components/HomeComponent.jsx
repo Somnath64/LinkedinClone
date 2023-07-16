@@ -1,7 +1,6 @@
 import "../Sass/HomeComponent.scss";
 import { useState } from "react";
-import LoginApi, { GoogleSigninAPI } from "../api/AuthAPI";
-import GoogleButton from "react-google-button";
+import LoginApi from "../api/AuthAPI";
 import { toast } from "react-toastify";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
@@ -34,11 +33,6 @@ const HomeComponent = () => {
     } catch (err) {
       toast.error("Please check your credentials!");
     }
-  };
-
-  const googleSignIn = async () => {
-    await GoogleSigninAPI();
-    navigate("/home");
   };
 
   return (
@@ -150,9 +144,7 @@ const HomeComponent = () => {
                 Sign in
               </button>
               <Divider />
-              <div className="google-auth-container">
-                <GoogleButton onClick={googleSignIn} />
-              </div>
+
               <span
                 onClick={() => {
                   navigate("/signup");

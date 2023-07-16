@@ -1,8 +1,6 @@
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
-  GoogleAuthProvider,
-  signInWithPopup,
   signOut,
 } from "firebase/auth";
 import { auth } from "../firebaseConfig";
@@ -23,23 +21,11 @@ export const SignUpAPI = async (email, password) => {
   try {
     console.log("response");
     let response = await createUserWithEmailAndPassword(auth, email, password);
-    console.log(response+"line 26");
+    console.log(response + "line 26");
     return response;
   } catch (err) {
     console.log(err);
     throw err;
-    // console.log(err);
-  }
-};
-
-export const GoogleSigninAPI = async () => {
-  try {
-    let googleProvider = new GoogleAuthProvider();
-    let response = signInWithPopup(auth, googleProvider);
-    return response;
-  } catch (err) {
-    return err;
-    // console.log(err);
   }
 };
 
@@ -49,6 +35,5 @@ export const SignOutAPI = async () => {
     localStorage.clear();
   } catch (err) {
     return err;
-    // console.log(err);
   }
 };

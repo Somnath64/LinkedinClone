@@ -76,7 +76,7 @@ export default function ProfilePage({ currentUser }) {
                                     ? currentUser?.imageLink
                                     : currentProfile?.imageLink
                                 }
-                                alt="bharat bhosale"
+                                alt="profileImage"
                                 className="card__Photo-img"
                               />
                             )}
@@ -96,7 +96,7 @@ export default function ProfilePage({ currentUser }) {
                             className="card__badge-btn button "
                             onClick={() => setModalOpen(true)}
                           >
-                            <img src={editIcon} alt="" />
+                            <img src={editIcon} alt="editIcon" />
                           </button>
                         )}
 

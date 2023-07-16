@@ -132,6 +132,11 @@
         .relative-mt2 {
           position: relative;
           margin-top: 0.6rem !important;
+
+          // @media screen and (max-width: 576px) {
+          //   display: flex;
+          //   flex-direction: row;
+          // }
           .detail-panel {
             max-width: 100%;
             line-height: 1;
@@ -159,11 +164,16 @@
             }
           }
           .detail-right-panel {
-            width: 232px;
+            width: 200px;
             list-style: none;
             position: absolute;
             top: 0;
             right: 0;
+            @media screen and (max-width: 576px) {
+              position: relative !important;
+              margin-top: 5px;
+            }
+
             .panel-text {
               font-size: 0.9rem;
               font-weight: 600;
@@ -171,6 +181,13 @@
               margin-bottom: 5px;
               word-wrap: break-word !important;
               word-break: break-word !important;
+
+              @media screen and (max-width: 576px) {
+                font-size: 0.9rem;
+                font-weight: 400;
+                line-height: 1;
+                color: rgba(0, 0, 0, 0.9);
+              }
             }
           }
           .detail-left-panel1 {

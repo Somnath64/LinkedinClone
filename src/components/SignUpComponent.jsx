@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { SignUpAPI, GoogleSigninAPI } from "../api/AuthAPI";
-import GoogleButton from "react-google-button";
+import { SignUpAPI } from "../api/AuthAPI";
 import { postUserData } from "../api/FirestoreAPI";
 import "../Sass/SignUpComponent.scss";
 import { linkedinLogo } from "../assets";
@@ -38,11 +37,6 @@ const SignUp = () => {
       toast.error("Cannot created your Account!");
       toast.error(err.code);
     }
-  };
-
-  const googleSignIn = async () => {
-    let res = await GoogleSigninAPI();
-    console.log(res);
   };
 
   return (
@@ -136,9 +130,6 @@ const SignUp = () => {
               </button>
             </div>
             <Divider />
-            <div className="google-auth-container">
-              <GoogleButton onClick={googleSignIn} />
-            </div>
             <p className="main-signin-container">
               Already on LinkedIn?
               <span

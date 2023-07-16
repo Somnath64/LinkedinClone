@@ -12,7 +12,6 @@ export default function FirstPage() {
 
   useEffect(() => {
     onAuthStateChanged(auth, (res) => {
-      console.log(res?.accessToken);
       if (res?.accessToken) {
         navigate("/home");
       } else {
