@@ -10,14 +10,14 @@ import {
 } from "../../../api/FirestoreAPI";
 import { PostsCard } from "../PostCard";
 import { useLocation } from "react-router-dom";
-import { editIcon} from "../../../assets";
+import { editIcon } from "../../../assets";
 import { useState, useMemo } from "react";
 
 export default function ProfilePage({ currentUser }) {
   let location = useLocation();
   const [modalOpen, setModalOpen] = useState(false);
   const [uploadImageModal, setUploadImageModal] = useState(false);
-  const [editInput, setEditInput] = useState("");
+  const [editInput, setEditInput] = useState(currentUser);
   const [allPosts, setAllPosts] = useState([]);
   const [allStatus, setAllStatus] = useState([]);
   const [currentProfile, setCurrentProfile] = useState({});
@@ -124,6 +124,13 @@ export default function ProfilePage({ currentUser }) {
                         {Object.values(currentProfile).length === 0
                           ? currentUser?.headline
                           : currentProfile?.headline}
+                      </div>
+                    </div>
+                    <div className="detail-panel1">
+                      <div className="text-subheading">
+                        {Object.values(currentProfile).length === 0
+                          ? currentUser?.about
+                          : currentProfile?.about}
                       </div>
                     </div>
                     <div className="detail-right-panel">

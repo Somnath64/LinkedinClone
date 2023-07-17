@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
@@ -21,12 +22,13 @@ const SignUp = () => {
   const register = async () => {
     try {
       let res = await SignUpAPI(credentials.email, credentials.password);
-      console.log(res);
+      console.log(res.user);
       postUserData({
         name: credentials.name,
-        email: credentials.email,
+        email: res.user.email,
         imageLink:
           "https://firebasestorage.googleapis.com/v0/b/linkedin-clone-f0fd6.appspot.com/o/defaultProfileImage%2FprofileImage.webp?alt=media&token=ae44c3e6-d31c-48d2-b3fb-d683244527fc",
+        id: res.user.uid,
       });
       toast.success("Account has been created successfully!");
       localStorage.setItem("userEmail", res.user.email);

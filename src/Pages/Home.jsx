@@ -12,7 +12,6 @@ export default function Home({ currentUser }) {
 
   useEffect(() => {
     onAuthStateChanged(auth, (res) => {
-      console.log(res?.accessToken);
       if (!res?.accessToken) {
         navigate("/login");
       } else {

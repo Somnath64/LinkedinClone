@@ -1,4 +1,4 @@
-import { firestore } from "../firebaseConfig";
+import { firestore, auth } from "../firebaseConfig";
 import {
   addDoc,
   collection,
@@ -71,8 +71,8 @@ export const getSingleUser = (setCurrentUser, email) => {
 };
 
 export const postUserData = (object) => {
-  console.log(object);
-  addDoc(userRef, object)
+  let addUser = doc(userRef, object.id);
+  setDoc(addUser, object)
     .then((data) => {
       console.log(data);
     })
@@ -89,7 +89,9 @@ export const getCurrentUser = (setCurrentUser) => {
           return { ...doc.data(), id: doc.id };
         })
         .filter((item) => {
-          return item.email === localStorage.getItem("userEmail");
+          if (auth.currentUser !== null) {
+            return item.email===auth.currentUser.email;
+          }
         })[0]
     );
   });

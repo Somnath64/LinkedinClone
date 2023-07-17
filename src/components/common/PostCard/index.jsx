@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useMemo, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import moment from "moment";
 import "./index.scss";
 import LikeButton from "../LikeButton";
 import {
@@ -21,6 +20,7 @@ export const PostsCard = ({ posts, getEditData }) => {
   const [commentCount, setCommentCount] = useState(0);
   const [isConnected, setIsConnected] = useState(false);
   const [allUsers, setAllUsers] = useState([]);
+
 
   useMemo(() => {
     getCurrentUser(setCurrentUser);
@@ -81,7 +81,7 @@ export const PostsCard = ({ posts, getEditData }) => {
                 </div>
                 <div className="feed-component-sub-decsription">
                   <span>
-                    {moment().startOf("day").fromNow(posts.timestamp)} •{" "}
+                    {posts.timestamp} •{" "}
                     <img src={worldIcon} alt="" />
                   </span>
                 </div>

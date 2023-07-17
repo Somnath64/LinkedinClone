@@ -21,5 +21,5 @@ export default function SignUp() {
     });
   }, []);
 
-  return loading ? <Loader /> : <SignUpComponent />;
+  return loading ? <Loader /> : <SignUpComponent  />;
 }

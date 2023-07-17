@@ -4,7 +4,7 @@ import peopleLogo from "./people-logo.svg";
 import learningLogo from "./book-logo.svg";
 import jobsLogo from "./nav-jobs.svg";
 import heroImage from "./hero-image.svg";
-import linkedinSmallLogo from "./linkedinLogo.svg";
+import linkedinSmallLogo from "./linkedinlogo.svg";
 import homeLogo from "./nav-home.svg";
 import searchIcon from "./search.svg";
 import jobsIcon from "./jobsIcon.svg";

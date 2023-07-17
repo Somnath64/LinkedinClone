@@ -69,7 +69,6 @@ export default function TopBar({ currentUser }) {
     return () => clearTimeout(debounced);
   }, [searchUsers]);
 
-  console.log(users);
 
   return (
     <header className="global-topbar">

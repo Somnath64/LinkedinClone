@@ -19,9 +19,7 @@ export default LoginApi;
 
 export const SignUpAPI = async (email, password) => {
   try {
-    console.log("response");
     let response = await createUserWithEmailAndPassword(auth, email, password);
-    console.log(response + "line 26");
     return response;
   } catch (err) {
     console.log(err);

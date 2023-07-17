@@ -27,7 +27,6 @@ export default function LikeButton({
     setcommentVisible(!commentVisible);
   };
 
-  console.log(currentUser);
 
   const addComment = () => {
     postComment(

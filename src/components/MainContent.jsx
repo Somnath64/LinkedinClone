@@ -16,8 +16,6 @@ export default function MainContent({ currentUser }) {
   const [currentPost, setCurrentPost] = useState({});
   const [postImage, setPostImage] = useState("");
 
-  console.log(postImage);
-
   const sendStatus = async () => {
     let object = {
       status: status,

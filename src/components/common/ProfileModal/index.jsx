@@ -126,6 +126,20 @@ const ProfileModal = ({
               onChange={getInput}
             />
           </div>
+          <div className="modal-input-field">
+            <p className="heading-text">Info</p>
+            <label className="modal-label">About</label>
+            <textarea
+              rows={4}
+              cols={3}
+              type="text"
+              className="modal-textarea"
+              placeholder=""
+              name="about"
+              value={editInput.about}
+              onChange={getInput}
+            />
+          </div>
         </div>
       </Modal>
     </>

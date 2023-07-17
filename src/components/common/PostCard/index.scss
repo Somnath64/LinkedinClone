@@ -11,7 +11,6 @@
 
     .feed-component {
       display: flex !important  ;
-      padding-right: 3rem;
       flex-wrap: nowrap;
       padding: 1.2rem 1.6rem 0;
       margin-bottom: 0.8rem;
@@ -54,13 +53,30 @@
           flex-basis: 0;
           margin-left: 0.8rem;
           overflow: hidden;
-          position: relative !important;
+          // position: relative !important;
 
           .feed-component-title {
             display: flex;
             flex-direction: column;
+            @media screen and (min-width: 1128px) {
+              width: 400px;
+            }
+            @media screen and (max-width: 1128px) {
+              width: 300px;
+            }
+            @media screen and (max-width: 992px) {
+              width: 380px;
+            }
+            @media screen and (max-width: 768px) {
+              width: 280px;
+            }
+
+            @media screen and (max-width: 576px) {
+              width: 200px;
+            }
 
             .feed-component-name {
+              width: 300px;
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
@@ -70,6 +86,22 @@
               font-size: 0.9rem;
               line-height: 1.4;
               font-weight: 600;
+              @media screen and (min-width: 1128px) {
+                width: 390px;
+              }
+              @media screen and (max-width: 1128px) {
+                width: 300px;
+              }
+              @media screen and (max-width: 992px) {
+                width: 300px;
+              }
+              @media screen and (max-width: 768px) {
+                width: 280px;
+              }
+
+              @media screen and (max-width: 576px) {
+                width:200px;
+              }
 
               .component-name:hover {
                 color: #0a66c2;

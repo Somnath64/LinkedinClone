@@ -13,8 +13,6 @@ export default function UploadImage({
 
   const [progress, setProgress] = useState(0);
 
-  console.log(currentUser?.id);
-
   const uploadImage = () => {
     uploadImageAPI(
       currentImage,
@@ -25,14 +23,9 @@ export default function UploadImage({
     );
   };
 
-  console.log(currentImage);
-
   const getImage = (event) => {
     setCurrentImage(event.target.files[0]);
   };
-
-  console.log(currentImage);
-  // useEffect(() => {}, [imageLink]);
 
   return (
     <>

@@ -13,15 +13,13 @@ const SignIn = () => {
 
   const showPasswordHandler = () => {
     const text = showBtn == "text" ? "password" : "text";
-    console.log(text);
     setShowBtn(text);
   };
 
   const login = async () => {
     try {
-      let res = await LoginApi(credentials.email, credentials.password);
+      await LoginApi(credentials.email, credentials.password);
       toast.success("Signed In to LinkedIn");
-      localStorage.setItem("userEmail", res.user.email);
       navigate("/home");
     } catch (err) {
       toast.error("Please check your credentials!");
