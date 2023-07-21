@@ -1,8 +1,7 @@
 
 # LinkedIn Clone
 
-## Demo 
-<a href="https://linkedin-clone-v2.vercel.app/" alt="link"> Link</a>
+## Demo <a href="https://linkedin-clone-v2.vercel.app/" alt="link"> Link</a>
 
 
 ## Project Overview
