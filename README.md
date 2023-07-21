@@ -5,6 +5,9 @@
 
 
 ## Project Overview
+
+<img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/linkedin%20home%20page.png" alt="main page">
+
 This project is a LinkedIn clone, designed to replicate some of the core functionalities and features of the original LinkedIn platform. It provides a social networking platform focused on professional networking, job searching, and career development. The goal of this clone is to provide users with an intuitive and familiar interface to connect with other professionals.
 
 ## Features
