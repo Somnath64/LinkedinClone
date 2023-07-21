@@ -31,16 +31,15 @@ This project is a LinkedIn clone, designed to replicate some of the core functio
 </ol>
 
 ## Usage
-<p>Register for a new account or log in with existing credentials.</p>
-<img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/LInkedin%20sighin%20page.png" alt="linkedin signin" width="600px">
-<img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/Linked%20Signup%20page.png" alt="linkedin signup" width="600px">
-<img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/linkedin%20home%20page.png" alt="main page" width="600px">
+<h4>Register for a new account or log in with existing credentials.</h4>
+<img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/LInkedin%20sighin%20page.png" alt="linkedin signin" width="600px"><img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/Linked%20Signup%20page.png" alt="linkedin signup" width="600px">
+<img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/linkedin%20home%20page.png" alt="main page">
 
-<p>Create and update your professional profile with accurate information.</p>
+<h4>Create and update your professional profile with accurate information.</h4>
 <img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/linkedin%20Update%20Profile.png" alt="linkedin Profile" width="600px">
 
-<p>Connect with other professionals and build your network.</p>
+<h4>Connect with other professionals and build your network.</h4>
 <img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/linkedin%20network%20page.png" alt="linkedin network page" width="600px">
 
-<p>Search professional </p>
+<h4>Search professional </h4>
 <img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/Linkedin%20Search%20user.png" alt="linkedin search user" width="600px">
