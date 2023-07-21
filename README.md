@@ -15,6 +15,8 @@ This project is a LinkedIn clone, designed to replicate some of the core functio
 
 <p><h3>Networking:</h3> Users can follow and see their posts and also unfollow.</p>
 
+<p><h3>Search:</h3> Search professional and find it.</p>
+
 ## Technologies Used
 <ol>
 <li>Frontend: HTML, CSS, JavaScript ,ReactJs.</li>
@@ -29,10 +31,16 @@ This project is a LinkedIn clone, designed to replicate some of the core functio
 </ol>
 
 ## Usage
-Register for a new account or log in with existing credentials.
-Create and update your professional profile with accurate information.
-Connect with other professionals and build your network.
-Browse through the news feed to stay updated with posts and industry news.
-Search for job opportunities and apply for jobs directly through the platform.
-Send and receive messages to communicate with your connections.
-Follow companies to receive updates and job postings from them.
+<p>Register for a new account or log in with existing credentials.</p>
+<img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/LInkedin%20sighin%20page.png" alt="linkedin signin" width="300px">
+<img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/Linked%20Signup%20page.png" alt="linkedin signup" width="300px">
+<img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/linkedin%20home%20page.png" alt="main page" width="300px">
+
+<p>Create and update your professional profile with accurate information.</p>
+<img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/linkedin%20Update%20Profile.png" alt="linkedin Profile" width="300px">
+
+<p>Connect with other professionals and build your network.</p>
+<img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/linkedin%20network%20page.png" alt="linkedin network page" width="300px">
+
+<p>Search professional </p>
+<img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/Linkedin%20Search%20user.png" alt="linkedin search user" width="300px">
