@@ -30,9 +30,10 @@ This project is a LinkedIn clone, designed to replicate some of the core functio
 </ol>
 
 ## Usage
-<h4>Register for a new account or log in with existing credentials.</h4>
-<img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/LInkedin%20sighin%20page.png" alt="linkedin signin" ><img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/Linked%20Signup%20page.png" alt="linkedin signup" >
+<h4>Main page, signin page and Signup page.</h4>
 <img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/linkedin%20home%20page.png" alt="main page">
+<img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/LInkedin%20sighin%20page.png" alt="linkedin signin" >
+<img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/Linked%20Signup%20page.png" alt="linkedin signup" >
 
 <h4>Create and update your professional profile with accurate information.</h4>
 <img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/linkedin%20Update%20Profile.png" alt="linkedin Profile">
@@ -42,3 +43,6 @@ This project is a LinkedIn clone, designed to replicate some of the core functio
 
 <h4>Search professional </h4>
 <img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/Linkedin%20Search%20user.png" alt="linkedin search user">
+
+<h4>Posts Linkes and comments  </h4>
+<img src="https://github.com/Somnath64/LinkedinClone/blob/master/Linkedin_Images/Linkedin%20Like%20and%20comments.png" alt="main page">
